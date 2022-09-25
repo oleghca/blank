@@ -20,6 +20,9 @@
 
 
 
+let bota ="гривень";
+    
+    
 
 
 
@@ -77,40 +80,60 @@ let bita = {
 let kupa;
 
 let sum = prompt('');
-console.log(sum)
+
 let gr = sum.split('');
 
-if(sum <= 999){
-    if((gr[0] > 0) && (gr[1] != 0) && (gr[2] != 0)){
+
+    if(gr <= 9){
         kupa =baza [gr[0]];
-        console.log(`${kupa}`)
-     }
-if((gr[0] > 0) && (gr[1] > 1) && (gr[2] > 0)){
-     kupa = buza[gr[0]]+bezi[gr[1]]+baza[gr[2]];
+        console.log(`${kupa}`);
+    }
     
-       console.log(`${kupa}`);
-       
-}
-      
-    if((gr[0] >= 1) && (gr[1] == 0) && (gr[2] == 0)){
-         kupa = buza[gr[0]];
-         console.log(`${kupa} гривень`);
-    }
-         if( gr[1] == 1){
-             kupa =buza[gr[0]] + bita[gr[2]];
-            console.log(`${kupa}`);
-    }
-          if((gr[0] > 0) && (gr[1] < 1) && (gr[2] != 0)){
-           kupa = bezi[gr[0]];
-           console.log(`${kupa} гривень`);
-    }
-          if((gr[0] > 1) && (gr[1] > 0) && (gr[2] != 0)){
-             kupa = bezi[gr[0]] + baza[gr[1]];
-             console.log(`${kupa}`);
-           
-        }
-          
-    }
+        if(gr[0] > 1 && gr[1] >= 1 && gr[2] == undefined){
+                  kupa = bezi[gr[0]]+' '+baza[gr[1]];
+                  console.log(`${kupa}`);
+               
+             }
+             if(gr[0] == 1 && gr[1] > 0 && gr[2] == undefined){
+                kupa = bita[gr[1]];
+                console.log(`${kupa}`)
+             }
+             if(gr[0] >= 1 && gr[1] == 0 && gr[2] == undefined){
+                kupa = bezi[gr[0]];
+                console.log(`${kupa} гривень`);
+             }
+             if(gr[0] >= 1 && gr[1] == 0 && gr[2] == 0){
+                    kupa = buza[gr[0]];
+                  console.log(`${kupa} гривень`);
+             }
+             if(gr[0] > 0 && gr[1] >= 1 && gr[2] == 0){
+                     kupa = buza[gr[0]]+' '+bezi[gr[1]];
+                    
+                    console.log(`${kupa} гривень`);
+                       
+                 }
+                 if((gr[0] > 0) && (gr[1] > 1) && (gr[2] > 0 && gr[3] == undefined)){
+                        kupa = buza[gr[0]]+' '+bezi[gr[1]]+' '+baza[gr[2]];
+                        
+                         console.log(`${kupa}`);
+                           
+                     }
+                     if((gr[0] > 0) && (gr[1] == 0) && (gr[2] > 0)){
+                            kupa = buza[gr[0]]+' '+baza[gr[2]];
+                            
+                              console.log(`${kupa}`);
+                               
+                     }
+                     if((gr[0] > 0) && (gr[1] == 1) && (gr[2] > 0)){
+                             kupa = buza[gr[0]]+' '+bita[gr[2]];
+                            
+                              console.log(`${kupa}`);
+                               
+                         }
+            
+     
+
+    
 
 
 
